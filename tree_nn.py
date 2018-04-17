@@ -83,7 +83,7 @@ def download_embeddings(path, emb_type, cachedir=CACHEDIR):
 
     if not os.path.exists(path):
         path_to_zip_file = os.path.join(cachedir, 'temp-{}.zip'.format(emb_type))
-        print('[info] downloading embeddings of type {}...' end=' ')
+        print('[info] downloading embeddings of type {}...', end=' ')
         download_file_from_google_drive(EMBEDDINGS_URLS[emb_type], path_to_zip_file)
         with zipfile.ZipFile(path_to_zip_file, 'r') as zf:
             path = os.path.join(cachedir, zf.filename().replece('.zip', ''))
