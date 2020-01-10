@@ -1,3 +1,0 @@
-[submodule "utils"]
-	path = utils
-	url = git@github.com:soldni/python3-utils.git
